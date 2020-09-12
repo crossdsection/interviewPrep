@@ -1,8 +1,10 @@
 let pixelBorder = 1;
-let pixelSize = 10;
+let pixelSize = 20;
 let canvasHeight = 500;
 let palletWidth = 100;
 let currentlyColor = "purple";
+
+const sampleColorArray = ["#ffffff","#68b0ab","#006a71","#ff7e67","#d789d7","#1a1c20"];
 
 function createPallet() {
     let palletElem = document.getElementById("pallet");
@@ -13,10 +15,25 @@ function createPallet() {
     colorPallet.setAttribute("type", "color");
     colorPallet.addEventListener("change", function(cc) {
         currentlyColor = colorPallet.value;
-    })
+    });
 
     inputDiv.appendChild(colorPallet);
     palletElem.appendChild(inputDiv);
+
+    for( const color of sampleColorArray ) {
+        let inputDiv = document.createElement("div");
+        inputDiv.style.width = "50px";
+        inputDiv.style.margin = "25px";
+        inputDiv.style.border = "1px solid";
+        inputDiv.style.height = "50px";
+        inputDiv.style.background = color;
+        inputDiv.addEventListener("click",function(){
+            currentlyColor = color;
+        });
+        palletElem.appendChild(inputDiv);    
+    }
+
+    let inputDiv = document.createElement("div");
 }
 
 createPallet()
