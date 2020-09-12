@@ -1,0 +1,33 @@
+.centerDiv {
+width: 100%;
+text-align: center;
+}
+.w-50 {
+width: calc(47% - 30px);
+text-align: center;
+}
+.bgPurple {
+background: purple;
+}
+.bgDarkGrey {
+background: grey;
+}
+.bgLightGrey {
+background: #eeeeee;
+}
+.fontWhite {
+color: white;
+}
+.borderPurple {
+border: 1px solid purple;
+}
+.mar30 {
+margin: 30px
+}
+
+#pallet {
+    float: left;
+}
+#canvas {
+    float: right;
+}
