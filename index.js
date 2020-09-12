@@ -32,8 +32,6 @@ function createPallet() {
         });
         palletElem.appendChild(inputDiv);    
     }
-
-    let inputDiv = document.createElement("div");
 }
 
 createPallet()
